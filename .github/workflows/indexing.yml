@@ -1,0 +1,14 @@
+name: Global Instant Indexing 2026
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  index-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Search Engines
+        run: |
+          curl -X GET "https://www.bing.com/indexnow?url=https://anwar521.github.io&key=6e467fc404384d558a94816abdfc63ec"
+          curl -X GET "https://www.google.com/ping?sitemap=https://anwar521.github.io/sitemap.xml"
